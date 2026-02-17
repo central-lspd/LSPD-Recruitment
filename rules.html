@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSPD Rules & Regulations | กฎระเบียบกรมตำรวจ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Kanit', sans-serif; }
+        
+        .bg-lspd-dark {
+            background: linear-gradient(rgba(10, 20, 30, 0.95), rgba(0, 0, 0, 0.98)), 
+                        url('https://wallpapers.com/images/hd/police-car-at-night-5k-w0v6y4t1z2x3s8q9.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Police Tape Effect */
+        .police-stripes {
+            background: repeating-linear-gradient(
+                45deg,
+                #fbbf24,
+                #fbbf24 10px,
+                #000 10px,
+                #000 20px
+            );
+            height: 8px;
+            width: 100%;
+        }
+
+        .hover-lift { transition: transform 0.2s; }
+        .hover-lift:hover { transform: translateY(-3px); }
+
+        /* Custom Bullet Points */
+        ul.police-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        ul.police-list li::before {
+            content: '➤';
+            position: absolute;
+            left: 0;
+            color: #fbbf24; 
+        }
+    </style>
+</head>
+<body class="bg-lspd-dark text-gray-200 min-h-screen">
+
+    <nav class="sticky top-0 z-50 glass-panel border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-yellow-500 text-black font-bold px-2 py-1 rounded text-xs tracking-widest">LSPD</div>
+                <h1 class="font-bold text-lg text-white">OFFICER HANDBOOK</h1>
+            </div>
+            <a href="index.html" class="text-gray-400 hover:text-white text-sm flex items-center gap-2 transition">
+                <i class="fas fa-arrow-left"></i> กลับหน้าสมัคร
+            </a>
+        </div>
+        <div class="police-stripes"></div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-12 text-center">
+        <i class="fas fa-balance-scale text-6xl text-yellow-500 mb-4 drop-shadow-lg"></i>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-2">กฎระเบียบและข้อบังคับ</h2>
+        <p class="text-gray-400">Los Santos Police Department Standard Operating Procedures</p>
+    </div>
+
+    <div class="container mx-auto px-4 pb-20 max-w-5xl">
+        
+        <div class="bg-red-900/30 border-l-4 border-red-500 p-6 mb-10 rounded-r-lg glass-panel">
+            <h3 class="text-red-400 font-bold text-xl mb-2"><i class="fas fa-exclamation-triangle mr-2"></i> ข้อควรระวัง (Strictly Prohibited)</h3>
+            <p class="text-gray-300">การทุจริตคอรัปชั่น (Corruption) หรือการนำอาวุธหลวงไปขาย มีโทษสูงสุดคือ <span class="text-white font-bold underline">แบนถาวร (Permaban)</span> โดยไม่มีการปลดแบนทุกกรณี</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            <div class="glass-panel p-6 rounded-xl hover-lift">
+                <div class="flex items-center gap-3 mb-4 pb-2 border-b border-gray-600">
+                    <i class="fas fa-star text-yellow-500 text-2xl"></i>
+                    <h3 class="text-xl font-bold text-white">1. จรรยาบรรณตำรวจ (Code of Conduct)</h3>
+                </div>
+                <ul class="police-list text-gray-300 text-sm leading-relaxed">
+                    <li>ต้องแยกแยะระหว่างบทบาท (IC) และเรื่องส่วนตัว (OOC) อย่างเด็ดขาด</li>
+                    <li>ห้ามใช้คำหยาบคายรุนแรง (Toxic) ใส่ประชาชน แม้จะถูกยั่วยุ</li>
+                    <li>ต้องเคารพผู้บังคับบัญชา และฟังคำสั่งอย่างเคร่งครัด (Chain of Command)</li>
+                    <li>ต้องแต่งกายให้ถูกระเบียบตามยศ และพกบัตรประจำตัวตลอดเวลา</li>
+                </ul>
+            </div>
+
+            <div class="glass-panel p-6 rounded-xl hover-lift">
+                <div class="flex items-center gap-3 mb-4 pb-2 border-b border-gray-600">
+                    <i class="fas fa-gun text-blue-400 text-2xl"></i>
+                    <h3 class="text-xl font-bold text-white">2. การใช้กำลัง (Use of Force Matrix)</h3>
+                </div>
+                <ul class="police-list text-gray-300 text-sm leading-relaxed">
+                    <li><strong class="text-green-400">Level 1 (วาจา):</strong> สั่งหยุด, ตักเตือน</li>
+                    <li><strong class="text-yellow-400">Level 2 (มือเปล่า/กระบอง):</strong> เมื่อผู้ต้องขัดขืนด้วยมือเปล่า</li>
+                    <li><strong class="text-orange-400">Level 3 (Taser):</strong> เมื่อผู้ต้องหาวิ่งหนี หรือมีอาวุธระยะประชิด</li>
+                    <li><strong class="text-red-500">Level 4 (Lethal):</strong> ใช้อาวุธปืนเมื่อผู้ต้องหามีปืน หรือเป็นภัยคุกคามถึงชีวิตเท่านั้น</li>
+                </ul>
+            </div>
+
+            <div class="glass-panel p-6 rounded-xl hover-lift">
+                <div class="flex items-center gap-3 mb-4 pb-2 border-b border-gray-600">
+                    <i class="fas fa-car-side text-red-400 text-2xl"></i>
+                    <h3 class="text-xl font-bold text-white">3. การไล่ล่า (Pursuit Protocol)</h3>
+                </div>
+                <ul class="police-list text-gray-300 text-sm leading-relaxed">
+                    <li>ห้ามชน (Ram) รถผู้ต้องหา หากความเร็วเกิน 100 km/h (ป้องกัน Powergaming)</li>
+                    <li>อนุญาตให้ทำ PIT Maneuver ได้เมื่อได้รับคำสั่งจากหัวหน้าชุด (Unit-1)</li>
+                    <li>หากเกิดอุบัติเหตุหนัก (รถคว่ำ/ชนกำแพง) ต้อง Roleplay อาการเจ็บทุกครั้ง ห้ามขับต่อทันที</li>
+                </ul>
+            </div>
+
+            <div class="glass-panel p-6 rounded-xl hover-lift">
+                <div class="flex items-center gap-3 mb-4 pb-2 border-b border-gray-600">
+                    <i class="fas fa-book-open text-purple-400 text-2xl"></i>
+                    <h3 class="text-xl font-bold text-white">4. สิทธิมิรันดา (Miranda Rights)</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-2">ต้องอ่านทุกครั้งเมื่อจับกุม (Copy ไปใช้ได้):</p>
+                <div class="bg-black bg-opacity-50 p-3 rounded border border-gray-700 text-yellow-500 text-sm italic">
+                    "คุณมีสิทธิ์ที่จะไม่พูด คำพูดของคุณอาจใช้เป็นพยานหลักฐานในศาลได้ คุณมีสิทธิ์ที่จะพบทนายความ หากไม่มี ทางรัฐจะจัดหาให้ คุณเข้าใจสิทธิเหล่านี้หรือไม่?"
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-12 text-center">
+            <p class="text-gray-400 mb-4">ข้าพเจ้าได้อ่านและเข้าใจกฎระเบียบทั้งหมดแล้ว</p>
+            <a href="index.html#apply" class="inline-block bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-500 hover:to-yellow-400 text-black font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
+                <i class="fas fa-check-circle mr-2"></i> ยอมรับและกลับไปสมัคร
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>

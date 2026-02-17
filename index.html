@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSPD Recruitment | Los Santos Police Department</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Kanit', sans-serif; }
+        
+        /* พื้นหลังแบบไล่เฉดสี และใส่ Pattern */
+        .bg-lspd {
+            background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(0, 0, 0, 0.95)), 
+                        url('https://wallpapers.com/images/hd/gta-5-police-4k-desktop-s0i3p6w1b5t2z8h4.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        /* เอฟเฟกต์กระจก */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        /* Animation */
+        .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #eab308; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-lspd text-gray-200 min-h-screen">
+
+    <nav class="fixed w-full z-50 glass-card bg-opacity-90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <img src="LSPD.webp" alt="LSPD Logo" class="h-12 w-auto mr-3 filter drop-shadow-[0_0_5px_rgba(234,179,8,0.5)]">
+                    <span class="font-bold text-xl tracking-wider text-white">LSPD <span class="text-yellow-500">RECRUITMENT</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#apply" class="bg-yellow-600 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded transition duration-300 shadow-[0_0_15px_rgba(234,179,8,0.5)]">
+                        สมัครเลย
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="relative pt-32 pb-20 sm:pt-40 sm:pb-24 overflow-hidden">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6 fade-in-up">
+                To Protect and <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">To Serve</span>
+            </h1>
+            <p class="mt-4 text-xl text-gray-300 max-w-2xl mx-auto fade-in-up delay-100">
+                ร่วมเป็นส่วนหนึ่งของกรมตำรวจ Los Santos เพื่อรักษาความสงบสุขและกฎหมาย 
+                <br>โอกาสของคุณในการพิสูจน์ตัวเองมาถึงแล้ว
+            </p>
+            <div class="mt-10 fade-in-up delay-200">
+                <a href="rules.html" class="text-yellow-500 hover:text-white font-semibold underline decoration-yellow-500 decoration-2 underline-offset-4 transition">อ่านกฎระเบียบก่อนสมัคร &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-4 pb-20">
+        
+        <div id="rules" class="glass-card rounded-2xl p-8 mb-10 fade-in-up delay-300">
+            <h2 class="text-2xl font-bold text-white mb-6 border-l-4 border-yellow-500 pl-4">คุณสมบัติเบื้องต้น</h2>
+            <div class="grid md:grid-cols-2 gap-6 text-gray-300">
+                <ul class="space-y-3">
+                    <li><i class="fas fa-check text-green-500 mr-2"></i> อายุ OOC 15 ปีขึ้นไป</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i> มีไมโครโฟนที่ชัดเจน ไม่มีเสียงรบกวน</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i> เข้าใจกฎ Roleplay พื้นฐาน</li>
+                </ul>
+                <ul class="space-y-3">
+                    <li><i class="fas fa-check text-green-500 mr-2"></i> ไม่มีประวัติอาชญากรรมร้ายแรง (IC)</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i> เคารพลำดับชั้นยศอย่างเคร่งครัด</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i> สามารถ Online ได้สม่ำเสมอ</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="apply" class="glass-card rounded-2xl p-8 fade-in-up delay-300 border-t-4 border-blue-600">
+            <h2 class="text-3xl font-bold text-center mb-8 text-white">แบบฟอร์มใบสมัคร</h2>
+            
+            <form id="recruitmentForm">
+                <div class="mb-8">
+                    <h3 class="text-yellow-500 font-semibold mb-4 text-lg border-b border-gray-700 pb-2">ข้อมูล OOC (นอกบทบาท)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-1">Discord ID</label>
+                            <input type="text" id="discord_id" placeholder="Example#1234" class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-1">Steam Hex ID</label>
+                            <input type="text" id="steam_id" class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-blue-400 font-semibold mb-4 text-lg border-b border-gray-700 pb-2">ข้อมูล IC (ในบทบาท)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-1">ชื่อ - นามสกุล</label>
+                            <input type="text" id="ic_name" class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-1">อายุ</label>
+                            <input type="number" id="ic_age" class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-400 mb-1">ประวัติความเป็นมา (Story)</label>
+                        <textarea id="story" rows="4" class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none transition" placeholder="เล่าเรื่องราวตัวละครของคุณ..."></textarea>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-red-400 font-semibold mb-4 text-lg border-b border-gray-700 pb-2">สถานการณ์จำลอง</h3>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-400 mb-1">หากพบผู้กระทำผิดขับรถหนีและยิงสวน คุณจะตัดสินใจอย่างไร?</label>
+                        <textarea id="scenario" rows="3" class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none transition"></textarea>
+                    </div>
+                </div>
+
+                <div class="text-center pt-4">
+                    <button type="button" onclick="sendToDiscord()" 
+                            class="w-full md:w-auto bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-bold py-3 px-10 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
+                        ยืนยันการสมัคร (ส่งเข้า Discord)
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="text-center text-gray-500 text-sm py-6 bg-black bg-opacity-80">
+        <p>&copy; 2024 Los Santos Police Department. All rights reserved.</p>
+        <p class="text-xs mt-1">This is a roleplay community website.</p>
+    </footer>
+
+    <a href="https://discord.gg/wjjzMhv8" target="_blank" 
+       class="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#5865F2] text-white px-5 py-3 rounded-full shadow-[0_0_20px_rgba(88,101,242,0.6)] hover:bg-[#4752C4] hover:scale-110 transition duration-300 animate-bounce">
+        <i class="fab fa-discord text-2xl"></i>
+        <span class="font-bold hidden md:inline">Join Discord</span>
+    </a>
+
+    <script>
+        function sendToDiscord() {
+            // =================================================================
+            // ⚠️ สำคัญมาก: เอาลิ้งค์ Webhook ที่คุณก๊อปมาจาก Discord มาวางตรงนี้
+            // =================================================================
+            const webhookURL = "https://discord.com/api/webhooks/1473062331377258536/5r6vQILHcrcpovNumIdh2U34QCuhvabvkZ4LiE0r8oRZZL9_cXPkhwhz82ye9VKGaVIX"; 
+
+            // ดึงค่าจากฟอร์มมาเก็บไว้ในตัวแปร
+            const discordID = document.getElementById('discord_id').value;
+            const steamID = document.getElementById('steam_id').value;
+            const icName = document.getElementById('ic_name').value;
+            const icAge = document.getElementById('ic_age').value;
+            const story = document.getElementById('story').value;
+            const scenario = document.getElementById('scenario').value;
+
+            // ตรวจสอบว่ากรอกข้อมูลครบไหม
+            if (!discordID || !icName || !story) {
+                alert("❌ กรุณากรอกข้อมูลให้ครบถ้วน!");
+                return;
+            }
+
+            // สร้างข้อความที่จะส่ง (Discord Embed)
+            const payload = {
+                username: "LSPD Recruitment Bot",
+                embeds: [{
+                    title: "👮 มีใบสมัครเจ้าหน้าที่ตำรวจใหม่!",
+                    color: 3447003, // สีน้ำเงินกรมท่า
+                    fields: [
+                        { name: "👤 ข้อมูลส่วนตัว (OOC)", value: `**Discord:** ${discordID}\n**Steam:** ${steamID}`, inline: false },
+                        { name: "👮 ข้อมูลตัวละคร (IC)", value: `**ชื่อ:** ${icName}\n**อายุ:** ${icAge}`, inline: true },
+                        { name: "📜 ประวัติ (Story)", value: story },
+                        { name: "🚨 สถานการณ์จำลอง", value: scenario }
+                    ],
+                    footer: { text: "ส่งใบสมัครเมื่อ: " + new Date().toLocaleString() }
+                }]
+            };
+
+            // ส่งข้อมูลไปยัง Discord
+            fetch(webhookURL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            }).then(response => {
+                if (response.ok) {
+                    alert("✅ ส่งใบสมัครเรียบร้อย! กรุณารอเรียกสัมภาษณ์ใน Discord ครับ");
+                    document.getElementById('recruitmentForm').reset(); // ล้างข้อมูลในฟอร์มหลังส่งเสร็จ
+                } else {
+                    alert("❌ เกิดข้อผิดพลาดในการส่งข้อมูล (กรุณาเช็ค Webhook URL)");
+                }
+            }).catch(error => {
+                console.error('Error:', error);
+                alert("❌ เกิดข้อผิดพลาดทางเทคนิค");
+            });
+        }
+    </script>
+
+</body>
+</html>
